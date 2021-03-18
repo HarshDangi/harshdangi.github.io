@@ -1,0 +1,100 @@
+<html>
+<head>   
+<!-- PushAlert -->
+<!--         <script type="text/javascript">
+                (function(d, t) {
+                        var g = d.createElement(t),
+                        s = d.getElementsByTagName(t)[0];
+                        g.src = "https://cdn.pushalert.co/integrate_47763cc75cc33180b47db794f478c713.js";
+                        s.parentNode.insertBefore(g, s);
+                }(document, "script"));
+        </script> -->
+        <!-- End PushAlert -->
+   
+ <script type="text/javascript">
+     src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  var OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "f64b7e1f-0346-4a44-be32-3140b101306a",
+    });
+  });
+</script>
+<script type="text/javascript">
+    var add = (function () {
+        var counter = 0;
+        return function () {return counter += 1;}
+    })();
+    function addToCart(){
+        document.getElementById("cart").innerHTML = 'Cart value is ' + add();
+    }
+    function goal() {
+        document.getElementById("demo").innerHTML = "Added product checked out..Goal Triggered !!";
+    }
+    var setCookie = function () {
+        var d = new Date();
+        d.setTime(d.getTime() + (365*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = 'qa-cookie' + "=" + 'jslib-test' + ";" + expires + ";path=/";
+        document.cookie = 'test-cookie' + "=" + '' + ";" + expires + ";path=/";
+    };
+    function setreferrer() {
+        document.getElementById("refer").href = window.location.href;
+    }
+</script>
+<script>
+    window._pcq = window._pcq || [];
+    window._pcq.push(['tag', 'AUTOMATION', 'E2E-Auto']);
+    window._pcq.push(['tag', 'browser', 'test']);
+  window._pcq.push(['tag', 'person_name', 'test']);
+ 
+  _pcq.push(['setNonInteraction', function(){return false}]);
+</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114290989-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114290989-1');
+</script>
+
+<style>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+p.info
+{
+    color:blue;
+    margin-left:30px;
+    font-size:x-large;
+    font-weight:bold;
+}
+</style>
+</head>
+<body onload="setCookie()">
+    <h1>Pushcrew</h1>
+    <p>On clicking Add to cart button, you will become the part of trigger campaign</p>
+    <p>After 5 min, you will get a notification</p>
+    <p>On clicking Checkout, you will be a converted subscriber of trigger campaign</p>
+    <p>After another 5 min, you will get one more notification if you haven't converted yet</p>
+    <br/>
+    <a class="button" id="refer" onclick="setreferrer()">Referrer</a>
+    <button class="button" id="add-cookie" onclick="setCookie()">Set Cookie</button>
+    <button class="button" id="entry" onclick="addToCart()">Add to cart</button>
+    <p class="info" id="cart">Cart value is 0</p>
+    <button class="button" id="exit" onclick="goal()">Checkout</button>
+    <p class="info" id="demo"></p>
+</body>
+</html>

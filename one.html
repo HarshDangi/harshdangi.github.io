@@ -1,0 +1,108 @@
+<html>
+<head>   
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "949ea9a4-d915-4460-8755-11dcb1d2c170",
+    });
+  });
+</script>
+<script type="text/javascript">
+    var add = (function () {
+        var counter = 0;
+        return function () {return counter += 1;}
+    })();
+    function addToCart(){
+        document.getElementById("cart").innerHTML = 'Cart value is ' + add();
+    }
+    function goal() {
+        document.getElementById("demo").innerHTML = "Added product checked out..Goal Triggered !!";
+    }
+    var setCookie = function () {
+        var d = new Date();
+        d.setTime(d.getTime() + (365*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = 'qa-cookie' + "=" + 'jslib-test' + ";" + expires + ";path=/";
+        document.cookie = 'test-cookie' + "=" + '' + ";" + expires + ";path=/";
+    };
+    function setreferrer() {
+        document.getElementById("refer").href = window.location.href;
+    }
+    function allStorage() {
+
+        var archive = [],
+            keys = Object.keys(localStorage),
+            i = 0, key;
+
+        for (; key = keys[i]; i++) {
+            archive.push( key + '=' + localStorage.getItem(key));
+        }
+
+        return archive;
+    }
+    function getCookies() {
+        document.cookie.split(';').forEach(function(val){
+            document.getElementById("cookies").innerHTML = document.getElementById("cookies").innerHTML + '</br>' + val;
+        })
+    }
+    function getLs() {
+        allStorage().forEach(function(val){
+            document.getElementById("ls").innerHTML = document.getElementById("ls").innerHTML + '</br>' + val;
+        })
+    }
+  function getBrowser(){
+    document.getElementById("br").innerHTML =  _pc_s().b();
+  }
+  function getUA(){
+    document.getElementById("ua").innerHTML = navigator.userAgent;
+  }
+</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114290989-1"></script>
+<style>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+p.info
+{
+    color:blue;
+    margin-left:30px;
+    font-size:x-large;
+    font-weight:bold;
+}
+</style>
+</head>
+<body onload="setCookie()">
+    <h1>One signal</h1>
+    <p>On clicking Add to cart button, you will become the part of trigger campaign</p>
+    <p>After 5 min, you will get a notification</p>
+    <p>On clicking Checkout, you will be a converted subscriber of trigger campaign</p>
+    <p>After another 5 min, you will get one more notification if you haven't converted yet</p>
+    <br/>
+    <a class="button" id="refer" onclick="setreferrer()">Referrer</a>
+    <button class="button" id="add-cookie" onclick="setCookie()">Set Cookie</button>
+    <button class="button" id="entry" onclick="addToCart()">Add to cart</button>
+    <p class="info" id="cart">Cart value is 0</p>
+    <button class="button" id="exit" onclick="goal()">Checkout</button>
+    <button class="button" id="get-cookie" onclick="getCookies()">Get Cookies</button>
+    <button class="button" id="get-ls" onclick="getLs()">Get LocalStorage</button>
+    <button class="button" id="get-br" onclick="getBrowser()">Get Browser</button>
+    <button class="button" id="get-ua" onclick="getUA()">Get UA</button>
+    <p id="cookies"> </p>
+    <p id="ls"> </p>
+    <p id="br"> </p>
+    <p id="ua"> </p>
+    <p class="info" id="demo"></p>
+</body>
+</html>

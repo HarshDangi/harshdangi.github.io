@@ -1,0 +1,175 @@
+<html>
+<head>   
+<!-- PushAlert -->
+<!--         <script type="text/javascript">
+                (function(d, t) {
+                        var g = d.createElement(t),
+                        s = d.getElementsByTagName(t)[0];
+                        g.src = "https://cdn.pushalert.co/integrate_47763cc75cc33180b47db794f478c713.js";
+                        s.parentNode.insertBefore(g, s);
+                }(document, "script"));
+        </script> -->
+        <!-- End PushAlert -->
+ <!-- Start VWO Async Smartcode -->
+<script type='text/javascript'>
+window._vwo_code = window._vwo_code || (function(){
+var account_id=333214,
+settings_tolerance=2000,
+library_tolerance=2500,
+use_existing_jquery=false,
+is_spa=1,
+hide_element='body',
+
+/* DO NOT EDIT BELOW THIS LINE */
+f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){
+window.settings_timer=setTimeout('_vwo_code.finish()',settings_tolerance);var a=d.createElement('style'),b=hide_element?hide_element+'{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}':'',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+(+is_spa)+'&r='+Math.random());return settings_timer; }};window._vwo_settings_timer = code.init(); return code; }());
+</script>
+<!-- End VWO Async Smartcode -->
+ <script type="text/javascript">
+     window._pushcrew_http_font = 'Open Sans';
+     (function() {
+        if(window.location.href.indexOf('hash') == -1){
+           var hash = prompt("Enter account hash", "24bea2fb1747789fe7b14a87445f9628");
+        if (hash != null) {
+            window.location.href=window.location.href + '?hash=' + hash;
+            } 
+        }
+        
+    }());
+    function getQueryStringValue (key) {  
+        return decodeURIComponent(window.location.search.replace(new RegExp("^(?:.*[&\\?]" + encodeURIComponent(key).replace(/[\.\+\*]/g, "\\$&") + "(?:\\=([^&]*))?)?.*$", "i"), "$1"));  
+    }   
+    var src;
+    var account_hash=getQueryStringValue('hash') ? getQueryStringValue('hash') : '255a91a0b4a0bf562e5148efc6de9b97';
+    if(getQueryStringValue('env') == "") {
+        src = 'https://cdn.pushcrew.com/js/'+ account_hash + '.js?random=' + Date.now();
+    } else if(getQueryStringValue('env') == "app1") {
+       src = 'https://cdn1.pushcrew.com/js/'+ account_hash + '.js?random=' + Date.now();
+    } else {
+        src = 'https://cdn.pushcrewstaging.com/js/'+ account_hash + '.js?random=' + Date.now();
+    }
+    var qajs = 'test-jslib';
+    (function(p,u,s,h){
+        p._pcq=p._pcq||[];
+        p._pcq.push(['_currentTime',Date.now()]);
+        s=u.createElement('script');
+        s.type='text/javascript';
+        s.async=true;
+        s.src=src;
+        h=u.getElementsByTagName('script')[0];
+        h.parentNode.insertBefore(s,h);
+    })(window,document);
+</script>
+<script type="text/javascript">
+    var add = (function () {
+        var counter = 0;
+        return function () {return counter += 1;}
+    })();
+    function addToCart(){
+        document.getElementById("cart").innerHTML = 'Cart value is ' + add();
+    }
+    function goal() {
+        document.getElementById("demo").innerHTML = "Added product checked out..Goal Triggered !!";
+    }
+    var setCookie = function () {
+        var d = new Date();
+        d.setTime(d.getTime() + (365*24*60*60*1000));
+        var expires = "expires="+ d.toUTCString();
+        document.cookie = 'qa-cookie' + "=" + 'jslib-test' + ";" + expires + ";path=/";
+        document.cookie = 'test-cookie' + "=" + '' + ";" + expires + ";path=/";
+    };
+    function setreferrer() {
+        document.getElementById("refer").href = window.location.href;
+    }
+    function allStorage() {
+
+        var archive = [],
+            keys = Object.keys(localStorage),
+            i = 0, key;
+
+        for (; key = keys[i]; i++) {
+            archive.push( key + '=' + localStorage.getItem(key));
+        }
+
+        return archive;
+    }
+    function getCookies() {
+        document.cookie.split(';').forEach(function(val){
+            document.getElementById("cookies").innerHTML = document.getElementById("cookies").innerHTML + '</br>' + val;
+        })
+    }
+    function getLs() {
+        allStorage().forEach(function(val){
+            document.getElementById("ls").innerHTML = document.getElementById("ls").innerHTML + '</br>' + val;
+        })
+    }
+  function getBrowser(){
+    document.getElementById("br").innerHTML =  _pc_s().b();
+  }
+  function getUA(){
+    document.getElementById("ua").innerHTML = navigator.userAgent;
+  }
+</script>
+<script>
+    window._pcq = window._pcq || [];
+    window._pcq.push(['tag', 'AUTOMATION', 'E2E-Auto']);
+    window._pcq.push(['tag', 'browser', 'test']);
+  window._pcq.push(['tag', 'person_name', 'test']);
+ 
+  _pcq.push(['setNonInteraction', function(){return false}]);
+</script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-114290989-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-114290989-1');
+</script>
+
+<style>
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+p.info
+{
+    color:blue;
+    margin-left:30px;
+    font-size:x-large;
+    font-weight:bold;
+}
+</style>
+</head>
+<body onload="setCookie()">
+    <h1>Pushcrew</h1>
+    <p>On clicking Add to cart button, you will become the part of trigger campaign</p>
+    <p>After 5 min, you will get a notification</p>
+    <p>On clicking Checkout, you will be a converted subscriber of trigger campaign</p>
+    <p>After another 5 min, you will get one more notification if you haven't converted yet</p>
+    <br/>
+    <a class="button" id="refer" onclick="setreferrer()">Referrer</a>
+    <button class="button" id="add-cookie" onclick="setCookie()">Set Cookie</button>
+    <button class="button" id="entry" onclick="addToCart()">Add to cart</button>
+    <p class="info" id="cart">Cart value is 0</p>
+    <button class="button" id="exit" onclick="goal()">Checkout</button>
+    <button class="button" id="get-cookie" onclick="getCookies()">Get Cookies</button>
+    <button class="button" id="get-ls" onclick="getLs()">Get LocalStorage</button>
+    <button class="button" id="get-br" onclick="getBrowser()">Get Browser</button>
+    <button class="button" id="get-ua" onclick="getUA()">Get UA</button>
+    <p id="cookies"> </p>
+    <p id="ls"> </p>
+    <p id="br"> </p>
+    <p id="ua"> </p>
+    <p class="info" id="demo"></p>
+</body>
+</html>
