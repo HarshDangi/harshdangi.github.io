@@ -13,30 +13,42 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
     <link rel="stylesheet" href="/selector/style.css">
-    <!-- Start VWO Async SmartCode -->
-<script type='text/javascript'>
-  function getQueryParameterByName(name, url) {
-        if (!url) url = window.location.href;
-        name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
-            results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return '';
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
-    }
-window._vwo_code = window._vwo_code || (function(){
-var account_id= getQueryParameterByName('accId') || 4000161,
-settings_tolerance=2000,
-library_tolerance=2500,
-use_existing_jquery=false,
-is_spa=1,
-hide_element='body',
+    
+    <script>
+       function getQueryParameterByName(name, url) {
+          if (!url) url = window.location.href;
+          name = name.replace(/[\[\]]/g, "\\$&");
+          var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+              results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return '';
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
 
-/* DO NOT EDIT BELOW THIS LINE */
-f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){
-window.settings_timer=setTimeout(function () {_vwo_code.finish() },settings_tolerance);var a=d.createElement('style'),b=hide_element?hide_element+'{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}':'',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+(+is_spa)+'&r='+Math.random());return settings_timer; }};window._vwo_settings_timer = code.init(); return code; }());
-</script>
-<!-- End VWO Async SmartCode -->
+        function spaNavigation(event) {
+          const path = event.target.getAttribute('href');
+          if(path) {
+            event.preventDefault();
+            window.history.pushState({}, null, path);
+          }
+        }
+    </script>
+    
+    <!-- Start VWO Async SmartCode -->
+    <script type='text/javascript'>
+      window._vwo_code = window._vwo_code || (function(){
+      var account_id= getQueryParameterByName('accId') || 4000161,
+      settings_tolerance=2000,
+      library_tolerance=2500,
+      use_existing_jquery=false,
+      is_spa=1,
+      hide_element='body',
+
+        /* DO NOT EDIT BELOW THIS LINE */
+        f=false,d=document,code={use_existing_jquery:function(){return use_existing_jquery;},library_tolerance:function(){return library_tolerance;},finish:function(){if(!f){f=true;var a=d.getElementById('_vis_opt_path_hides');if(a)a.parentNode.removeChild(a);}},finished:function(){return f;},load:function(a){var b=d.createElement('script');b.src=a;b.type='text/javascript';b.innerText;b.onerror=function(){_vwo_code.finish();};d.getElementsByTagName('head')[0].appendChild(b);},init:function(){
+        window.settings_timer=setTimeout(function () {_vwo_code.finish() },settings_tolerance);var a=d.createElement('style'),b=hide_element?hide_element+'{opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important;}':'',h=d.getElementsByTagName('head')[0];a.setAttribute('id','_vis_opt_path_hides');a.setAttribute('type','text/css');if(a.styleSheet)a.styleSheet.cssText=b;else a.appendChild(d.createTextNode(b));h.appendChild(a);this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&f='+(+is_spa)+'&r='+Math.random());return settings_timer; }};window._vwo_settings_timer = code.init(); return code; }());
+    </script>
+    <!-- End VWO Async SmartCode -->
   </head>
   
   <body>
@@ -59,6 +71,7 @@ window.settings_timer=setTimeout(function () {_vwo_code.finish() },settings_tole
             <li><a href="#about">About</a></li>
             <li><a href="#teamSpacing">Team</a></li>
             <li><a href="#contactSpacing">Contact</a></li>
+            <li><a id='spa1' href='/spa'>SPA</a></li>
           </ul>
         </div>
       </div>
@@ -216,6 +229,8 @@ window.settings_timer=setTimeout(function () {_vwo_code.finish() },settings_tole
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="/selector/client.js"></script>
 
-
+    <script>
+      document.querySelector('#spa1').addEventListener('click', spaNavigation);
+    </script>
   </body>
 </html>
