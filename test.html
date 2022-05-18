@@ -32,6 +32,14 @@
             window.history.pushState({}, null, path);
           }
         }
+      
+        function pressBttnTwice(selectorPath, mouseEventType) {
+          const node = document.querySelector(selectorPath);
+          var clickEvent = document.createEvent ('MouseEvents');
+          clickEvent.initEvent (mouseEventType, true, true);
+          node.dispatchEvent (clickEvent);
+          node.dispatchEvent (clickEvent);
+        }
     </script>
     
     <!-- Start VWO Async SmartCode -->
@@ -214,6 +222,7 @@
 
        <div class="row" id="goals">
          <button>EngagementBttn</button>
+         <button onclick="()=>{pressBttnTwice('#goals > button', 'mousedown')}">Click EngagementBttn twice</button>
       </div>
       <div id="push"></div>
     </div>
