@@ -92,7 +92,7 @@ window._vwo_code = window._vwo_code || (function() {
                 b.innerHTML = content;
                 d.getElementsByTagName('head')[0].appendChild(b);
             },
-            loadJSAsInline: function(crossorigin) {
+           loadJSAsInline: function(url, crossorigin) {
                 fetch(url).then((response)=>{return response.text()}).then((response)=>{this.addInlineScript(response, crossorigin)})
             },
             getVersion: function() {
