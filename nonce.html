@@ -87,7 +87,6 @@ window._vwo_code = window._vwo_code || (function() {
           addInlineScript: function(content, crossorigin) {
                 var b = d.createElement('script');
                 b.fetchPriority = 'high';
-                b.src = content;
                 b.type = 'text/javascript';
                 b.innerHTML = content;
                 d.getElementsByTagName('head')[0].appendChild(b);
