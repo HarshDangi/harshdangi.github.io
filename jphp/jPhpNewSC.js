@@ -76,30 +76,30 @@ try {
             d.vwo_iehack_queue = [b],
             f("_vwo_uuid_v2", a.join("|"), 366))
         }
-        )("harshdangi.github.io", "DAD89DD4731C15F57F841D293DEF5853C|867c0aa0878d0db82a4e0b2e6fa3794b", document, window, 0, _vwo_code.sT);
+        )("harshdangi.github.io", "D695AAD6B2FE1D7BE3BAA5A033FB65E89|de0b1f16a98910dafcf1c909b69d14dc", document, window, 0, _vwo_code.sT);
         var _vwo_acc_id = 656095;
         clearTimeout(_vwo_settings_timer);
         _vwo_exp_ids = [],
         _vwo_exp = {};
         window.VWO = window.VWO || [];
         window.VWO.data = {
-            "ts": 1668497553,
+            "ts": 1668499513,
             "noSS": false
         };
         window.VWO.featureInfo = {
+            "dt": "mobile",
+            "mrp": 20,
+            "csp": true,
+            "uct": "",
+            "dtdfd": "",
+            "fsLogRule": "",
+            "dtd": "1000",
+            "it": "",
+            "spa": "0",
+            "eavr": "0",
             "cInstJS": "",
             "cRecJS": "",
-            "dt": "mobile",
-            "dtd": "1000",
-            "dtdfd": "",
-            "it": "",
-            "uct": "",
-            "csp": true,
-            "fsLogRule": "",
-            "hC": 3,
-            "spa": "0",
-            "mrp": 20,
-            "eavr": "0"
+            "hC": 3
         };
         _vwo_exp_ids.push('2');
         _vwo_exp['2'] = {
@@ -133,7 +133,7 @@ try {
                     "path": "",
                     "variations": {
                         "1": "[]",
-                        "2": "[{\"js\":\"var el,ctx=vwo_$(x);\\n\\\/*vwo_debug log(\\\"addElement\\\",\\\"body\\\"); vwo_debug*\\\/!(el=vwo_$(\\\"body\\\")).find('[vwo-op-1668418804012=\\\"\\\"]').length&&el.vwoElement({html:\\\"<script>\\\\nconsole.log('this console.log is from head')<\\\\\\\/script>\\\",position:\\\"append\\\"}),(el=vwo_$(\\\"#test1 > h2:nth-of-type(1)\\\")).html(\\\"JSLIB CSP\\\");\",\"xpath\":\"body\"},{\"js\":\"<script type='text\\\/javascript'>;\\n\\\/*vwo_debug log(\\\"content\\\",\\\"head\\\"); vwo_debug*\\\/console.log(\\\"this is some custom code\\\");<\\\/script>;\",\"xpath\":\"HEAD\"}]"
+                        "2": "[{\"js\":\"var el,ctx=vwo_$(x);\\n\\\/*vwo_debug log(\\\"addElement\\\",\\\"body\\\"); vwo_debug*\\\/!(el=vwo_$(\\\"body\\\")).find('[vwo-op-1668499146718=\\\"\\\"]').length&&el.vwoElement({html:\\\"<script>\\\\nconsole.log('this console.log is from head')<\\\\\\\/script>\\\",position:\\\"append\\\"}),(el=vwo_$(\\\"#test1 > h2:nth-of-type(1)\\\")).html(\\\"JSLIB CSP\\\");\",\"xpath\":\"body\"},{\"js\":\"<script type='text\\\/javascript'>;\\n\\\/*vwo_debug log(\\\"content\\\",\\\"head\\\"); vwo_debug*\\\/console.log(\\\"this is some custom code\\\");const st=Date.now();for(;Date.now()<st+1e3;);<\\\/script>;\",\"xpath\":\"HEAD\"}]"
                     },
                     "segment": {
                         "1": 1,
@@ -162,14 +162,12 @@ try {
             "ps": true
         };
         _vwo_exp[2].sections[1].cspCompVariations = _vwo_exp[2].sections[1].cspCompVariations || {};
-        _vwo_exp[2].sections[1].cspCompVariations[1] = _vwo_exp[2].sections[1].cspCompVariations[1] || [];
-        _vwo_exp[2].sections[1].cspCompVariations = _vwo_exp[2].sections[1].cspCompVariations || {};
         _vwo_exp[2].sections[1].cspCompVariations[2] = _vwo_exp[2].sections[1].cspCompVariations[2] || [];
         _vwo_exp[2].sections[1].cspCompVariations[2].push(function() {
             (function(x) {
                 var el, ctx = vwo_$(x);
                 /*vwo_debug log("addElement","body"); vwo_debug*/
-                !(el = vwo_$("body")).find('[vwo-op-1668418804012=""]').length && el.vwoElement({
+                !(el = vwo_$("body")).find('[vwo-op-1668499146718=""]').length && el.vwoElement({
                     html: "<script>\nconsole.log('this console.log is from head')<\/script>",
                     position: "append"
                 }),
@@ -183,17 +181,22 @@ try {
                 try {
                     ;/*vwo_debug log("content","head"); vwo_debug*/
                     console.log("this is some custom code");
+                    const st = Date.now();
+                    for (; Date.now() < st + 1e3; )
+                        ;
                 } catch (e) {}
                 ;vwo_$('head').append('')
             }
             )('HEAD')
         });
+        _vwo_exp[2].sections[1].cspCompVariations = _vwo_exp[2].sections[1].cspCompVariations || {};
+        _vwo_exp[2].sections[1].cspCompVariations[1] = _vwo_exp[2].sections[1].cspCompVariations[1] || [];
         _vwo_exp[2].sections[1].cspSegmentCode = _vwo_exp[2].sections[1].cspCompSegment || {};
-        _vwo_exp[2].sections[1].cspSegmentCode[1] = function() {
+        _vwo_exp[2].sections[1].cspSegmentCode[2] = function() {
             return 1;
         }
         ;
-        _vwo_exp[2].sections[1].cspSegmentCode[2] = function() {
+        _vwo_exp[2].sections[1].cspSegmentCode[1] = function() {
             return 1;
         }
         ;
@@ -324,9 +327,9 @@ try {
         )();
         window.VWO.data.vi = window.VWO.data.vi || {
             "os": "MacOS",
-            "dt": "desktop",
             "br": "Chrome",
-            "de": "Other"
+            "de": "Other",
+            "dt": "desktop"
         };
         window.VWO.push(['enableSPA']);
         VWO.load_co = function(a) {
@@ -343,8 +346,8 @@ try {
             document.getElementsByTagName('head')[0].appendChild(b);
         }
         var _vwo_cookieDomain = 'harshdangi.github.io'
-          , _vwo_uuid = 'DAD89DD4731C15F57F841D293DEF5853C';
-        window.VWO.data.as = "r3.visualwebsiteoptimizer.com";
+          , _vwo_uuid = 'D695AAD6B2FE1D7BE3BAA5A033FB65E89';
+        window.VWO.data.as = "r2.visualwebsiteoptimizer.com";
         var _vwo_library_timer = setTimeout(function() {
             var vwoCode = window._vwo_code;
             vwoCode.removeLoaderAndOverlay && vwoCode.removeLoaderAndOverlay();
@@ -352,7 +355,7 @@ try {
         }, _vwo_code.library_tolerance());
         var _vis_opt_file = 'web/djIkdGU6Ny4wOmFzeW5jJWdxdWVyeQ==/tag-a03d0261195a498eae089bb27f0e205a.js'
           , _vis_opt_lib = (typeof _vis_opt_lib == 'undefined') ? 'https://dev.visualwebsiteoptimizer.com/' + _vis_opt_file : _vis_opt_lib;
-          _vwo_code.loadJSAsInline(_vis_opt_lib);
+        _vwo_code.loadJSAsInline(_vis_opt_lib);
         ;window.VWO = window.VWO || [];
         window.VWO._ = window.VWO._ || {};
         VWO._.ac = VWO._.ac || {};
@@ -370,10 +373,10 @@ try {
         VWO.data.content = {
             "fns": {
                 "list": {
-                    "vn": 1,
                     "args": {
                         "1": {}
-                    }
+                    },
+                    "vn": 1
                 }
             }
         };
