@@ -76,30 +76,30 @@ try {
             d.vwo_iehack_queue = [b],
             f("_vwo_uuid_v2", a.join("|"), 366))
         }
-        )("harshdangi.github.io", "D695AAD6B2FE1D7BE3BAA5A033FB65E89|de0b1f16a98910dafcf1c909b69d14dc", document, window, 0, _vwo_code.sT);
+        )("harshdangi.github.io", "D3DB246A44587241FE2105A7F7E57C777|1d82b2ff66f5a98088ea21a5ea173c87", document, window, 0, _vwo_code.sT);
         var _vwo_acc_id = 656095;
         clearTimeout(_vwo_settings_timer);
         _vwo_exp_ids = [],
         _vwo_exp = {};
         window.VWO = window.VWO || [];
         window.VWO.data = {
-            "ts": 1668499513,
+            "ts": 1668500520,
             "noSS": false
         };
         window.VWO.featureInfo = {
-            "dt": "mobile",
+            "fsLogRule": "",
             "mrp": 20,
             "csp": true,
             "uct": "",
-            "dtdfd": "",
-            "fsLogRule": "",
             "dtd": "1000",
-            "it": "",
+            "hC": 3,
             "spa": "0",
-            "eavr": "0",
             "cInstJS": "",
+            "dtdfd": "",
+            "eavr": "0",
             "cRecJS": "",
-            "hC": 3
+            "dt": "mobile",
+            "it": ""
         };
         _vwo_exp_ids.push('2');
         _vwo_exp['2'] = {
@@ -116,12 +116,9 @@ try {
             "urlRegex": "^https\\:\\\/\\\/harshdangi\\.github\\.io\\\/nonce\\.html\\\/?(?:[\\?#].*)?$",
             "exclude_url": "",
             "multiple_domains": 0,
-            "segment_code": "(_vwo_s().f_nin(_vwo_s().de(), 'ipod') && _vwo_s().f_nin(_vwo_s().de(), 'ipad') && _vwo_s().f_nin(_vwo_s().de(), 'iphone') && _vwo_s().f_nin(_vwo_s().de(), 'winphone') && _vwo_s().f_nin(_vwo_s().de(), 'android') && _vwo_s().f_nin(_vwo_s().de(), 'googletv') && _vwo_s().f_nin(_vwo_s().de(), 'symbian') && _vwo_s().f_nin(_vwo_s().de(), 'blackberry')) && (_vwo_s().f_d_con(_vwo_s().ua(), 'Mobile'))",
-            "ss": {
-                "csa": 0
-            },
+            "segment_code": "true",
+            "ss": null,
             "ibe": 1,
-            "segment_code_v2": "(_vwo_s().f_e(_vwo_s().dt(), 'desktop'))",
             "muts": {
                 "post": {
                     "enabled": true,
@@ -144,8 +141,8 @@ try {
             },
             "varSegAllowed": false,
             "combs": {
-                "1": 0.5,
-                "2": 0.5
+                "1": 0,
+                "2": 1
             },
             "comb_n": {
                 "1": "Control",
@@ -200,15 +197,6 @@ try {
             return 1;
         }
         ;
-        _vwo_exp[2].cspCompSegmentCode = function() {
-            return (_vwo_s().f_e(_vwo_s().dt(), 'desktop'))
-        }
-        ;
-        _vwo_exp[2].orifySegmentCode = function() {
-            return (_vwo_s().f_e(_vwo_s().dt(), 'desktop'))
-        }
-        ;
-        _vwo_exp[2].ss.cspJs = {};
         var vwoCode = window._vwo_code;
         if (vwoCode.filterConfig && vwoCode.filterConfig.filterTime === 'balanced') {
             vwoCode.removeLoaderAndOverlay && vwoCode.removeLoaderAndOverlay()
@@ -346,8 +334,8 @@ try {
             document.getElementsByTagName('head')[0].appendChild(b);
         }
         var _vwo_cookieDomain = 'harshdangi.github.io'
-          , _vwo_uuid = 'D695AAD6B2FE1D7BE3BAA5A033FB65E89';
-        window.VWO.data.as = "r2.visualwebsiteoptimizer.com";
+          , _vwo_uuid = 'D3DB246A44587241FE2105A7F7E57C777';
+        window.VWO.data.as = "r1.visualwebsiteoptimizer.com";
         var _vwo_library_timer = setTimeout(function() {
             var vwoCode = window._vwo_code;
             vwoCode.removeLoaderAndOverlay && vwoCode.removeLoaderAndOverlay();
