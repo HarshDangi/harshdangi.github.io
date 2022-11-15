@@ -44,6 +44,8 @@
     
     <!-- Start VWO Async SmartCode -->
     <script type='text/javascript' nonce='nxqrz38qRKKugLlww8GwiQ=='>
+      const jphpUrl = getQueryParameterByName('jphp') ? 'jphp/jPhpNewSC.js?a=' : 'https://dev.visualwebsiteoptimizer.com/j.php?a=';
+      console.log('using j.php from -> ', jphpUrl);
 window._vwo_code = window._vwo_code || (function() {
     var account_id = 582541, // replace 1 with ${accountId} in release string
         version = 1.5,
@@ -133,7 +135,7 @@ window._vwo_code = window._vwo_code || (function() {
                 else a.appendChild(d.createTextNode(b));
                 h.appendChild(a);
                 var c = this.getCombinationCookie();
-                this.load('jphp/jPhpNewSC.js?a=' + account_id + '&u=' + encodeURIComponent(d.URL) + '&f=' + (+is_spa) + '&vn=' + version + (c ? ('&c=' + c) : ''));
+                this.load(jphpUrl + account_id + '&u=' + encodeURIComponent(d.URL) + '&f=' + (+is_spa) + '&vn=' + version + (c ? ('&c=' + c) : ''));
                 return settings_timer;
             }
         };
