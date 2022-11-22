@@ -86,15 +86,15 @@ window._vwo_code = window._vwo_code || (function() {
                 };
                 d.getElementsByTagName('head')[0].appendChild(b);
             },
-          addInlineScript: function(content, crossorigin) {
-                var b = d.createElement('script');
-                b.fetchPriority = 'high';
-                b.type = 'text/javascript';
-                b.innerHTML = content;
-                d.getElementsByTagName('head')[0].appendChild(b);
-            },
-           loadJSAsInline: function(url, crossorigin) {
-                fetch(url).then((response)=>{return response.text()}).then((response)=>{this.addInlineScript(response, crossorigin)})
+           loadJSAsInline: function(config={}) {
+             return function(url) {
+                fetch(url).then((response)=>{return response.text()}).then((response)=>{
+                  var b = d.createElement('script');
+                  b.fetchPriority = congif.fp;
+                  b.type = 'text/javascript';
+                  b.innerHTML = content;
+                  d.getElementsByTagName('head')[0].appendChild(b);
+             }
             },
             getVersion: function() {
                 return version;
