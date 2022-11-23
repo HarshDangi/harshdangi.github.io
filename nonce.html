@@ -93,7 +93,7 @@ window._vwo_code = window._vwo_code || (function() {
                     var b = d.createElement('script');
                     b.fetchPriority = config.fp;
                     b.type = 'text/javascript';
-                    b.innerHTML = content;
+                    b.innerHTML = response;
                     d.getElementsByTagName('head')[0].appendChild(b);
                     if(config.remove) {
                        if (b.parentNode) {
