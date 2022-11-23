@@ -87,14 +87,32 @@ window._vwo_code = window._vwo_code || (function() {
                 d.getElementsByTagName('head')[0].appendChild(b);
             },
            loadJSAsInline: function(config={}) {
-             return function(url) {
-                fetch(url).then((response)=>{return response.text()}).then((response)=>{
-                  var b = d.createElement('script');
-                  b.fetchPriority = congif.fp;
-                  b.type = 'text/javascript';
-                  b.innerHTML = content;
-                  d.getElementsByTagName('head')[0].appendChild(b);
-             }
+             return function(url, success, fail) {
+               try {
+                fetch(url).then(response=>response.text()).then((response)=>{
+                    var b = d.createElement('script');
+                    b.fetchPriority = congif.fp;
+                    b.type = 'text/javascript';
+                    b.innerHTML = content;
+                    d.getElementsByTagName('head')[0].appendChild(b);
+                    if(config.remove) {
+                       if (b.parentNode) {
+                          b.parentNode.removeChild(b);
+                      } else {
+                          // otherwise wait for 100ms so that script will be added to dom.
+                          window.setTimeout(function () {
+                              if (b.parentNode) {
+                                  b.parentNode.removeChild(b);
+                              }
+                          }, 100);
+                      }
+                    }
+                    success && success();
+                 })
+               } catch(e) {
+                fail && fail(e);
+               }
+              }
             },
             getVersion: function() {
                 return version;
