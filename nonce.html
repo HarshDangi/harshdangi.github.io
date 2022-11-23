@@ -88,7 +88,11 @@ window._vwo_code = window._vwo_code || (function() {
             },
            loadJSAsInline: function(url, config={}) {
                try {
-                fetch(url).then(response=>response.text()).then((response)=>{
+                 const options = {};
+                 if(config.co === 'anonymous') {
+                  options.mode = 'cors';
+                 }
+                fetch(url, options).then(response=>response.text()).then((response)=>{
                     var b = d.createElement('script');
                     b.fetchPriority = config.fp;
                     b.type = 'text/javascript';
