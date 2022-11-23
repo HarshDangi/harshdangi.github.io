@@ -91,7 +91,7 @@ window._vwo_code = window._vwo_code || (function() {
                try {
                 fetch(url).then(response=>response.text()).then((response)=>{
                     var b = d.createElement('script');
-                    b.fetchPriority = congif.fp;
+                    b.fetchPriority = config.fp;
                     b.type = 'text/javascript';
                     b.innerHTML = content;
                     d.getElementsByTagName('head')[0].appendChild(b);
