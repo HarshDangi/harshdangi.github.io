@@ -86,8 +86,7 @@ window._vwo_code = window._vwo_code || (function() {
                 };
                 d.getElementsByTagName('head')[0].appendChild(b);
             },
-           loadJSAsInline: function(config={}) {
-             return function(url, success, fail) {
+           loadJSAsInline: function(url, config={}) {
                try {
                 fetch(url).then(response=>response.text()).then((response)=>{
                     var b = d.createElement('script');
@@ -107,12 +106,11 @@ window._vwo_code = window._vwo_code || (function() {
                           }, 100);
                       }
                     }
-                    success && success();
+                    config.success && config.success();
                  })
                } catch(e) {
-                fail && fail(e);
+                config.fail && config.fail(e);
                }
-              }
             },
             getVersion: function() {
                 return version;
