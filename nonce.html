@@ -90,7 +90,7 @@ window._vwo_code = window._vwo_code || (function() {
                try {
                  const options = {};
                  if(config.co === 'anonymous') {
-                  options.mode = 'cors';
+                  options.mode = 'no-cors';
                   options.credentials = 'same-origin';
                  }
                 fetch(url, options).then(response=>response.text()).then((response)=>{
