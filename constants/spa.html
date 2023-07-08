@@ -247,11 +247,11 @@
       document.querySelector('#spa1').addEventListener('click', spaNavigation);
       document.querySelector('#home').addEventListener('click', spaNavigation);
       const spa2Row = document.querySelector('#spa2Row');
-      function() {
+      document.querySelector('#home').addEventListener('click', function() {
         if(spa2Row.childElementCount) {
           spa2Row.removeChild(spa2Row.childNodes[0])
         }
-      }
+      });
       document.querySelector('#spa1').addEventListener('click', function() {
         const p = document.createElement('p');
         p.setAttribute('id', 'spa2Para');
