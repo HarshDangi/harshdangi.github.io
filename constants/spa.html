@@ -26,8 +26,9 @@
         }
 
         function spaNavigation(event) {
-          const path = event.target.getAttribute('href');
+          let path = event.target.getAttribute('href');
           if(path) {
+            path += document.location.search;
             event.preventDefault();
             window.history.pushState({}, null, path);
           }
@@ -79,7 +80,8 @@
             <li><a href="#about">About</a></li>
             <li><a href="#teamSpacing">Team</a></li>
             <li><a href="#contactSpacing">Contact</a></li>
-            <li><a id='spa1' href='/spa'>SPA</a></li>
+            <li><a id='spa1' href='/constants/spa2'>SPA</a></li>
+            <li><a id="home" href="/constants/spa">Home</a></li>
           </ul>
         </div>
       </div>
