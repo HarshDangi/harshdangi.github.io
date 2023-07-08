@@ -91,6 +91,7 @@
     <div class="container">
 
       <div class="anchor" id="slider"></div>
+      <div class="row" id="spa2Row></div>
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <div id="owl-captions" class="owl-carousel owl-theme">
@@ -245,6 +246,18 @@
     <script>
       document.querySelector('#spa1').addEventListener('click', spaNavigation);
       document.querySelector('#home').addEventListener('click', spaNavigation);
+      const spa2Row = document.querySelector('#spa2Row');
+      function() {
+        if(spa2Row.childElementCount) {
+          spa2Row.removeChild(spa2Row.childNodes[0])
+        }
+      }
+      document.querySelector('#spa1').addEventListener('click', function() {
+        const p = document.createElement('p');
+        p.setAttribute('id', 'spa2Para');
+        p.innerText = "This text is only visible of spa2 page";
+        spa2Row.appendChild(p);
+      });
     </script>
   </body>
 </html>
