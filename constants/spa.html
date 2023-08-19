@@ -42,7 +42,15 @@
           node.dispatchEvent (clickEvent);
         }
     </script>
-    
+    <script>
+      const params = new URLSearchParams(document.location.search);
+      for (const [key, value] of params) {
+        if(key.startsWith('set_')){
+           window[key] = value;
+        }
+      }      
+    </script>
+
     <!-- Start VWO Async SmartCode -->
     <script type='text/javascript'>
       window._vwo_code ||
